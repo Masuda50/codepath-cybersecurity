@@ -17,14 +17,14 @@ Time spent: 5 hours spent in total
   - [ ] GIF Walkthrough: 
         ![](ex1.gif)
 
-  - [ ] Steps to recreate: 
-  		- Upload any media file that has the capacity to hold metadata through the admin portal. 
-  		- After uploading, edit the descrption panel to hold "filename <script>alert("Exploit 3 Successful");</script>".
+  - [ ] Steps to recreate: 																									
+  		- Upload any media file that has the capacity to hold metadata through the admin portal.\
+  		- After uploading, edit the descrption panel to hold "filename <script>alert("Exploit 3 Successful");</script>".nsbp&
   		- Save and view the attachment in the blog where an XSS generated alert will appear.
 
 
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [WP_MEDIA_UPLOAD_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/media-upload.php)									
 
 2. (Required) Unauthenticated XSS in Posted Comment
 
@@ -36,12 +36,11 @@ Time spent: 5 hours spent in total
   - [ ] GIF Walkthrough: 
   		![](ex2.gif)
 
-  - [ ] Steps to recreate: 
-        - Through the user facing blog move to create and post a comment.  
-        - Use the template <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px <REST OF COMMENT>'></a>
-        - Fill in <REST OF COMMENT> with an extremely large amount of data. 
-        - Post the comment and scroll up to view the XSS alert. 	
-  		Construct a message over 64kb in size.
+  - [ ] Steps to recreate: 																									
+        - Through the user facing blog move to create and post a comment.\  
+        - Use the template <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px <REST OF COMMENT>'></a>nsbp&
+        - Fill in <REST OF COMMENT> with an extremely large amount of data.\
+        - Post the comment and scroll up to view the XSS alert.\
 
   - [ ] Affected source code:
     - [WP_COMMENTS_POST_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-comments-post.php)
@@ -56,14 +55,14 @@ Time spent: 5 hours spent in total
   - [ ] GIF Walkthrough:
   		![](ex3.gif) 
 
-  - [ ] Steps to recreate: 
-  		- Through the admin portal create a new post 
-  		- In the post place a malicous link refrence that containes script in it such as: <a href="[caption code=">]</a><a title=" onmouseover=alert('HACKED!') ">link</a>
-  		- Create the post and view it from the front end. 
-  		- Click on the link and an alert will appear. 
+  - [ ] Steps to recreate: 																								     	
+  		- Through the admin portal create a new post.\ 
+  		- In the post place a malicous link refrence that containes script in it such as: <a href="[caption code=">]</a><a title=" onmouseover=alert('HACKED!') "> link</a>nbsp&
+  		- Create the post and view it from the front end.\ 
+  		- Click on the link and an alert will appear.\ 
   
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [WP_ADMIN_POST_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/admin-post.php) 										
 
 ## Assets
 
