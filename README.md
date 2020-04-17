@@ -1,97 +1,41 @@
-# Web-Security - CSC 59938 :: Project 7 - WordPress Pentesting
+# Project 8 - Pentesting Live Targets
 
-Time spent: 5 hours spent in total
+Time spent: **X** hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
-## Pentesting Report
+The six possible exploits are:
+* Username Enumeration
+* Insecure Direct Object Reference (IDOR)
+* SQL Injection (SQLi)
+* Cross-Site Scripting (XSS)
+* Cross-Site Request Forgery (CSRF)
+* Session Hijacking/Fixation
 
+Each version of the site has been given two of the six vulnerabilities. (In other words, all six of the exploits should be assignable to one of the sites.)
 
-1. (Required) Authenticated Cross-Site Scripting through Media File Data
+## Blue
 
-  - [ ] Summary: 
-    - Vulnerability types: Cross-Site Scripting 
-    - Tested in version: 4.2
-    - Fixed in version: 4.7.3
+Vulnerability #1: __________________
 
-  - [ ] GIF Walkthrough: 
-        ![](ex1.gif)
-
-  - [ ] Steps to recreate: 	<br/>																								
-  		Upload any media file that has the capacity to hold metadata through the admin portal.<br/>
-  		After uploading, edit the descrption panel to hold "filename <script>alert("Exploit 3 Successful");</script>". <br/>
-  		Save and view the attachment in the blog where an XSS generated alert will appear.
+Vulnerability #2: __________________
 
 
-  - [ ] Affected source code:
-    - [WP_MEDIA_UPLOAD_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/media-upload.php)									
+## Green
 
-2. (Required) Unauthenticated XSS in Posted Comment
+Vulnerability #1: __________________
 
-  - [ ] Summary: 
-    - Vulnerability types: XSS / Buffer Overflow.
-    - Tested in version: 4.2
-    - Fixed in version: 4.2.1
-
-  - [ ] GIF Walkthrough: 
-  		![](ex2.gif)
-
-  - [ ] Steps to recreate: <br/>																						
-        Through the user facing blog move to create and post a comment. <br/> 
-        Use the template <a title='x onmouseover=alert(unescape(/hello%20world/.source)) style=position:absolute;left:0;top:0;width:5000px;height:5000px <REST OF COMMENT>'></a> <br/>
-        Fill in <REST OF COMMENT> with an extremely large amount of data.<br/>
-        Post the comment and scroll up to view the XSS alert.\
-
-  - [ ] Affected source code:
-    - [WP_COMMENTS_POST_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-comments-post.php)
-
-3. (Required) Authenticated Stored Cross-Site Scripting (XSS)
-
-  - [ ] Summary: 
-    - Vulnerability types: Cross-Site Scripting
-    - Tested in version: 4.2
-    - Fixed in version: 4.2.3
-
-  - [ ] GIF Walkthrough:
-  		![](ex3.gif) 
-
-  - [ ] Steps to recreate: <br/>																								     	
-  		Through the admin portal create a new post.<br/>
-  		In the post place a malicous link refrence that containes script in it such as: <a href="[caption code=">]</a><a title=" onmouseover=alert('HACKED!') "> link</a> <br/>
-  		Create the post and view it from the front end. <br/>
-  		Click on the link and an alert will appear. <br/> 
-  
-  - [ ] Affected source code:
-    - [WP_ADMIN_POST_PHP](https://core.trac.wordpress.org/browser/branches/4.2/src/wp-admin/admin-post.php) 										
-
-## Assets
-
-	OWASP XSS CHEAT SHEET: https://owasp.org/www-community/xss-filter-evasion-cheatsheet
+Vulnerability #2: __________________
 
 
-## Resources
+## Red
 
-- [WordPress Source Browser](https://core.trac.wordpress.org/browser/)
-- [WordPress Developer Reference](https://developer.wordpress.org/reference/)
+Vulnerability #1: __________________
 
-GIFs created with [LiceCap](http://www.cockos.com/licecap/).
+Vulnerability #2: __________________
+
 
 ## Notes
 
-  --Finding and writing scripts the be automatically performed.  
+Describe any challenges encountered while doing the work
 
-## License
-
-    Copyright [2020] [name of Copyright Owner]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
