@@ -1,12 +1,15 @@
-'#'Project 9 - HoneyPot
 
-##HoneyPot Deployed: 
+# Project 9 - HoneyPot
+
+
+## HoneyPot Deployed:
+
 Dionaea
 
-##Issues: 
+## Issues: 
 
 
-##Summary of Data Collected: 
+## Summary of Data Collected: 
 
 ![](1.png)
 
@@ -15,4 +18,5 @@ Dionaea
 ![](attacks.gif)
 
 
-##Unresolved Questions: 
+## Unresolved Questions: 
+
