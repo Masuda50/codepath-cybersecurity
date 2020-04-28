@@ -2,7 +2,7 @@
 # Project 9 - HoneyPot
 
 
-##HoneyPot Deployed: 
+## HoneyPot Deployed: 
 Dionaea (1x)
 
 ##Issues: 
@@ -21,7 +21,7 @@ Total Number of Attacks: 667,786
 ![](attacks.gif)
 
 
-##Unresolved Questions: 
+## Unresolved Questions: 
 
 How am I supposed to be able to find any indication of malware attacks to the honeypot?
 
